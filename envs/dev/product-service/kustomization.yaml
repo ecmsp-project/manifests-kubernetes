@@ -1,0 +1,10 @@
+---
+namespace: ecmsp
+replicas:
+- name: product-service
+  count: 1
+images:
+- name: 529236942244.dkr.ecr.eu-central-1.amazonaws.com/ecmsp-project/product-service
+  newTag: v0.1.1
+resources:
+- ../../../product-service
