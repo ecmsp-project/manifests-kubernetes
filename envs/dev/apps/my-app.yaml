@@ -5,7 +5,7 @@ metadata:
   name: my-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: 424432388155.dkr.ecr.us-east-1.amazonaws.com/antonputra/app-lesson-268
+    argocd-image-updater.argoproj.io/image-list: 529236942244.dkr.ecr.eu-central-1.amazonaws.com/ecmsp-project/product-service
     argocd-image-updater.argoproj.io/users.update-strategy: semver
     argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:
@@ -13,7 +13,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:antonputra/k8s-lesson-268.git
+    repoURL: git@github.com:ecmsp-project/manifests-kubernetes.git
     targetRevision: HEAD
     path: envs/dev/my-app
   destination:
