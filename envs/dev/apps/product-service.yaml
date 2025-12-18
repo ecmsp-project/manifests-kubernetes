@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app
+  name: product-service
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: 529236942244.dkr.ecr.eu-central-1.amazonaws.com/ecmsp-project/product-service
@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: git@github.com:ecmsp-project/manifests-kubernetes.git
     targetRevision: HEAD
-    path: envs/dev/my-app
+    path: envs/dev/product-service
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
