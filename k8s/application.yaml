@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-dev
+  name: ecmsp-services
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io/foreground
@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: git@github.com:ecmsp-project/manifests-kubernetes.git
     targetRevision: HEAD
-    path: envs/dev/apps
+    path: envs/dev/services
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
